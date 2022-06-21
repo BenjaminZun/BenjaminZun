@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+background-color: #111;
+}
+
+.maincontainer{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.asidenavbar{
+        width: 15%;
+        height: 100%;
+        background-color: #111;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        padding: 20px 0;
+        border-right: 1px solid #222;
+        position: fixed;
+}
+
+.mainmovie{
+    width: 85%;
+    position: absolute;
+    right: 0;
+    background-color: #111;
+}
+.mainmovie .heading{
+    display: flex;
+    color: rgb(226,226,226);
+}
+.mainmovie .heading .head-content{
+    width: 50%;
+    padding: 20px;
+    background-color: black;
+}
+
+.mainmovie .heading .head-content h2{
+    font-size: 24px;
+    text-transform: capitalize;
+}
+.head-content .rating{
+    display: flex;
+    margin: 30px 0;
+}
+.head-content .btn{
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    border: 1px solid white;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-left: 5px;
+    border-radius: 50px;
+}
+.head-content .btn{
+    font-size: 20px;
+}
+
+.head-content .btn{
+    color: greenyellow;
+}
+
+.head-content p{
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.head-content .btn-main{
+    border-radius: 5px;
+    color: rgb(226,226,226);
+    text-decoration: none;
+    width: 120px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    background-color: red;
+    border: none;
+    text-transform: capitalize;
+}
+
+.mainmovie .heading .img-container{
+    width: 50%;
+    height: 350px;
+    background: url(../images/main-img.jpg) no-repeat center center / cover;
+}
+
+.mainmovie .heading .img-container img{
+    width: 100%;
+    height: 100%;
+}
+
+.trending{
+    margin-top: 40px;
+    padding-left: 20px;
+}
+h1{
+    color: rgb(226,226,226);
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+h1 span{
+    font-size: 16px;
+    color: red;
+    font-weight: lighter;
+    margin-left: 20px;
+}
+
+.trending .movie-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 20px;
+}
+.list{
+    width: 250px;
+    height: 300px;
+    position: relative;
+}
+
+.list::before{
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px);
+    transition: all 0.4s;
+}
+
+.list:hover::before{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.list:nth-child(1)::before{
+    content: 'extraction';
+}
+.list:nth-child(2)::before{
+    content: 'star wars';
+}
+
+.list:nth-child(3)::before{
+    content: 'The call wild';
+}
+.list:nth-child(4)::before{
+    content: 'Venom';
+}
+
+.list:nth-child(5)::before{
+    content: 'The Man In The High Castle';
+}
+
+.list:nth-child(1){
+    background: url(../images/extraction.jpg) no-repeat center center /cover;
+}
+
+.list:nth-child(2){
+    background: url(../images/star-wars.jpg) no-repeat center center /cover;
+}
+
+.list:nth-child(3){
+    background: url(../images/wild.jpg) no-repeat center center /cover;
+}
+
+.list:nth-child(4){
+    background: url(../images/venom.jpg) no-repeat center center /cover;
+}
+
+.list:nth-child(5){
+    background: url(../images/theman.jpg) no-repeat center center /cover;
+}
+
+.tv .list:nth-child(1){
+    background: url(../images/money.jpg) no-repeat center center /cover;
+}
+
+.tv .list:nth-child(2){
+    background: url(../images/westworld.jpg) no-repeat center center /cover;
+}
+.tv .list:nth-child(3){
+    background: url(../images/upload.jpg) no-repeat center center /cover;
+}
+.tv .list:nth-child(4){
+    background: url(../images/got.jpg) no-repeat center center /cover;
+}
+.tv .list:nth-child(5){
+    background: url(../images/fastandfuri.jpg) no-repeat center center /cover;
+}
+
+
+.tv .list:nth-child(1)::before{
+    content: 'money heist';
+}
+.tv .list:nth-child(2)::before{
+    content: 'westworld';
+}
+
+.tv .list:nth-child(3)::before{
+    content: 'upload';
+}
+.tv .list:nth-child(4)::before{
+    content: 'game of thrones';
+}
+
+.tv .list:nth-child(5)::before{
+    content: 'Fast and Furious 9';
+}
+
+.tv {
+    margin-bottom: 50px;
+}
